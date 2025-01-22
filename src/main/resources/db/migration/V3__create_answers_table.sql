@@ -1,0 +1,10 @@
+CREATE TABLE answers (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    message VARCHAR(255) NOT NULL,
+    solution BOOLEAN DEFAULT FALSE,
+    topic_id BIGINT NOT NULL,
+    user_id BIGINT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT fk_answers_topics FOREIGN KEY (topic_id) REFERENCES topics (id) ON DELETE CASCADE,
+    CONSTRAINT fk_answers_users FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
+);
