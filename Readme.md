@@ -17,7 +17,7 @@ spring.jpa.properties.hibernate.format_sql=true
 spring.jpa.show-sql=true
 api.security.secret=${JWT_SECRET}
 `
-
+5. Create record in users, with your credentials
 5. Install Maeven dependencies
 6. Run Project.
 
